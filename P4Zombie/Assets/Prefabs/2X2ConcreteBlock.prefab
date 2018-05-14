@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4476715939136774}
   - component: {fileID: 33448560185247398}
   - component: {fileID: 23664306866494644}
+  - component: {fileID: 64908847360837308}
   m_Layer: 0
   m_Name: 2X2ConcreteBlock
   m_TagString: Untagged
@@ -82,4 +83,18 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1710779677776650}
+  m_Mesh: {fileID: 4300000, guid: 78ed6f7f49dc2c744a2bc9d96d6742a1, type: 3}
+--- !u!64 &64908847360837308
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1710779677776650}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 78ed6f7f49dc2c744a2bc9d96d6742a1, type: 3}
