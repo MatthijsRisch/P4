@@ -469,6 +469,11 @@ Prefab:
       propertyPath: cameraY
       value: 
       objectReference: {fileID: 1278623683}
+    - target: {fileID: 114797047757403928, guid: 8ac7b87fa7b9b804bb404ceabfc0bbbe,
+        type: 2}
+      propertyPath: clampAmount
+      value: 70
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8ac7b87fa7b9b804bb404ceabfc0bbbe, type: 2}
   m_IsPrefabParent: 0
