@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23891347011230678}
   - component: {fileID: 64558357612835526}
   m_Layer: 0
-  m_Name: 2x2Plane
+  m_Name: 4x4Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
