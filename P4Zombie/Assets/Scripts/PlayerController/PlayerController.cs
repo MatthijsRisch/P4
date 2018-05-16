@@ -25,6 +25,9 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed;
     float moveSpeedReset;
 
+    GameObject equippedWeapon;
+
+
     float timeSinceStaminaUse;
 
     private void Start()
@@ -64,7 +67,7 @@ public class PlayerController : MonoBehaviour
         //shoot gun
         if (Input.GetButtonDown("Fire1") == true)
         {
-            
+            //shoot();
         }
 	}
 

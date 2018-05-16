@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class HandGun : WeaponBase
 {
-
-
 	void Start ()
     {
 		
@@ -13,7 +11,7 @@ public class HandGun : WeaponBase
 
     private void Update()
     {
-        Shoot();
+
     }
 
     public override void Shoot()
