@@ -589,6 +589,11 @@ Prefab:
       propertyPath: canFire
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114602713909052542, guid: de12d2a1f3c01ed4fa4a16e06d290d36,
+        type: 2}
+      propertyPath: ammo
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: de12d2a1f3c01ed4fa4a16e06d290d36, type: 2}
   m_IsPrefabParent: 0
@@ -2623,6 +2628,11 @@ Prefab:
     - target: {fileID: 4983433968280626, guid: 8ac7b87fa7b9b804bb404ceabfc0bbbe, type: 2}
       propertyPath: m_LocalPosition.z
       value: 0.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 54951516153973758, guid: 8ac7b87fa7b9b804bb404ceabfc0bbbe,
+        type: 2}
+      propertyPath: m_Constraints
+      value: 122
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8ac7b87fa7b9b804bb404ceabfc0bbbe, type: 2}

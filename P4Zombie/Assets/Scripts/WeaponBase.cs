@@ -12,25 +12,29 @@ public class WeaponBase : MonoBehaviour
     public float reloadTime;
     public int bulletInClip;
     public int clipSize;
+    public int ammo;
 
     public RaycastHit hit;
 
-	void Update ()
+    private void Start()
     {
-        if(Input.GetButtonDown("Fire1") == true && canFire == true)
+        bulletInClip = clipSize;
+    }
+
+    void Update ()
+    {
+        if(Input.GetButtonDown("Fire1") == true && canFire == true && bulletInClip > 0)
         {
             Shoot();
 
             StartCoroutine("TimeBetweenShots");
-            Debug.Log("enumerator");
+        }
+
+        if(Input.GetButtonDown("Reload") == true && bulletInClip < clipSize)
+        {
+            Reload();
         }
 	}
-
-    public virtual IEnumerator TimeBetweenShots()
-    {
-        yield return new WaitForSeconds(fireRate);
-        canFire = true;
-    }
 
     public virtual void Shoot()
     {
@@ -43,6 +47,30 @@ public class WeaponBase : MonoBehaviour
             }
         }
         canFire = false;
+
+        bulletInClip--;
         Debug.Log("Gun Fired");
+    }
+
+    public virtual void Reload()
+    {
+        StartCoroutine("ReloadTime");
+    }
+
+
+    public virtual IEnumerator TimeBetweenShots()
+    {
+        yield return new WaitForSeconds(fireRate);
+        canFire = true;
+    }
+
+    public virtual IEnumerator ReloadTime()
+    {
+        canFire = false;
+        yield return new WaitForSeconds(reloadTime);
+        ammo -= clipSize;
+        bulletInClip = clipSize;
+        canFire = true;
+        Debug.Log("reloaded");
     }
 }
