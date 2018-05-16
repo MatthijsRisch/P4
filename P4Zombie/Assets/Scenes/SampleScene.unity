@@ -582,7 +582,7 @@ Prefab:
     - target: {fileID: 114602713909052542, guid: de12d2a1f3c01ed4fa4a16e06d290d36,
         type: 2}
       propertyPath: fireRate
-      value: 0.5
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 114602713909052542, guid: de12d2a1f3c01ed4fa4a16e06d290d36,
         type: 2}
@@ -592,7 +592,22 @@ Prefab:
     - target: {fileID: 114602713909052542, guid: de12d2a1f3c01ed4fa4a16e06d290d36,
         type: 2}
       propertyPath: ammo
-      value: 100
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 114602713909052542, guid: de12d2a1f3c01ed4fa4a16e06d290d36,
+        type: 2}
+      propertyPath: automatic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114602713909052542, guid: de12d2a1f3c01ed4fa4a16e06d290d36,
+        type: 2}
+      propertyPath: clipSize
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 114602713909052542, guid: de12d2a1f3c01ed4fa4a16e06d290d36,
+        type: 2}
+      propertyPath: damage
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: de12d2a1f3c01ed4fa4a16e06d290d36, type: 2}

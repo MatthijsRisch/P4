@@ -23,7 +23,13 @@ public class WeaponBase : MonoBehaviour
 
     void Update ()
     {
-        if(Input.GetButtonDown("Fire1") == true && canFire == true && bulletInClip > 0)
+        if(Input.GetButtonDown("Fire1") == true && canFire == true && bulletInClip > 0 && automatic == false)
+        {
+            Shoot();
+
+            StartCoroutine("TimeBetweenShots");
+        }
+        else if(Input.GetButton("Fire1") == true && canFire == true && bulletInClip > 0 && automatic == true)
         {
             Shoot();
 
@@ -48,7 +54,7 @@ public class WeaponBase : MonoBehaviour
         }
         canFire = false;
 
-        bulletInClip--;
+        bulletInClip -= 1;
         Debug.Log("Gun Fired");
     }
 
