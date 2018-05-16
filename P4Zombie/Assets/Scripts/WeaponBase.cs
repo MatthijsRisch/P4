@@ -8,32 +8,39 @@ public class WeaponBase : MonoBehaviour
     public int range;
     public float fireRate;
     public bool automatic;
-    bool canFire;
+    bool canFire = true;
     public float reloadTime;
     public int bulletInClip;
     public int clipSize;
+    public int ammo;
 
     public RaycastHit hit;
 
-	void Start ()
+    private void Start()
     {
-		
-	}
-	
-	void Update ()
-    {
-        if (canFire == false)
-        {
-            TimeBetweenShots(fireRate);
-        }
-	}
-
-    public virtual IEnumerator TimeBetweenShots(float waitTime)
-    {
-        yield return new WaitForSeconds(waitTime);
-        canFire = true;
+        bulletInClip = clipSize;
     }
 
+    void Update ()
+    {
+        if(Input.GetButtonDown("Fire1") == true && canFire == true && bulletInClip > 0 && automatic == false)
+        {
+            Shoot();
+
+            StartCoroutine("TimeBetweenShots");
+        }
+        else if(Input.GetButton("Fire1") == true && canFire == true && bulletInClip > 0 && automatic == true)
+        {
+            Shoot();
+
+            StartCoroutine("TimeBetweenShots");
+        }
+
+        if(Input.GetButtonDown("Reload") == true && bulletInClip < clipSize)
+        {
+            Reload();
+        }
+	}
 
     public virtual void Shoot()
     {
@@ -42,10 +49,34 @@ public class WeaponBase : MonoBehaviour
             if(hit.transform.tag == "Zombie")
             {
                 Debug.Log("hit");
+                hit.transform.GetComponent<ZombieScript>().health -= damage;
             }
         }
-        Debug.DrawRay(transform.position, transform.forward * 100, Color.gray);
-
         canFire = false;
+
+        bulletInClip -= 1;
+        Debug.Log("Gun Fired");
+    }
+
+    public virtual void Reload()
+    {
+        StartCoroutine("ReloadTime");
+    }
+
+
+    public virtual IEnumerator TimeBetweenShots()
+    {
+        yield return new WaitForSeconds(fireRate);
+        canFire = true;
+    }
+
+    public virtual IEnumerator ReloadTime()
+    {
+        canFire = false;
+        yield return new WaitForSeconds(reloadTime);
+        ammo -= clipSize;
+        bulletInClip = clipSize;
+        canFire = true;
+        Debug.Log("reloaded");
     }
 }

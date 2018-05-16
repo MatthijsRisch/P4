@@ -85,7 +85,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1392733267237774}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.38, y: 1.3855746, z: -0.2}
+  m_LocalPosition: {x: 148.65347, y: 532.37, z: -753.44104}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4607655012748394}
@@ -216,7 +216,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf2cc5a33ae784f46aeb0addac033278, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clampAmount: 70
   sensitivity: 10
+  cameraY: {fileID: 1392733267237774}
 --- !u!114 &114946421082999200
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -230,12 +232,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxStamina: 100
   stamina: 0
-  timeTillStaminaRegen: 1
+  timeTillStaminaRegen: 2
   staminaRegenRate: 5
   jumpHeight: 500
-  jumpStaminaDrain: 1
-  sprintMultiplier: 1
-  sprintStaminaDrain: 1
+  jumpStaminaDrain: 20
+  sprintMultiplier: 1.5
+  sprintStaminaDrain: 2
   moveSpeed: 5
 --- !u!136 &136723472273771654
 CapsuleCollider:
