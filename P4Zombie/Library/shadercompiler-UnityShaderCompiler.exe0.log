@@ -1,6 +1,20 @@
 Base path: D:/unity/Editor/Data
 Cmd: initializeCompiler
 Cmd: initializeCompiler
+<<<<<<< HEAD
+=======
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+=======
+Base path: C:/Program Files/Unity/Editor/Data
+Cmd: initializeCompiler
+<<<<<<< HEAD
+=======
+>>>>>>> 85d5a7b70a3b8583447a66ef510a695a0a4647ab
 Cmd: preprocess
   insize=3183 outsize=321 ok=1
 Cmd: preprocess
@@ -51,6 +65,7 @@ Cmd: preprocess
   insize=3433 outsize=1527 ok=1
 Cmd: preprocess
   insize=1978 outsize=955 ok=1
+<<<<<<< HEAD
 Cmd: initializeCompiler
 Cmd: initializeCompiler
 Cmd: compileSnippet
@@ -74,4 +89,12 @@ Cmd: initializeCompiler
 Cmd: initializeCompiler
 Cmd: initializeCompiler
 Cmd: initializeCompiler
+=======
+>>>>>>> 112e32e13b0945e2a6eaaf360413349c4fcbfe36
+>>>>>>> 7cfaf063ba8979e88f948dc5cf9d061718ba1c63
+>>>>>>> 85d5a7b70a3b8583447a66ef510a695a0a4647ab
 Cmd: initializeCompiler
+Cmd: compileSnippet
+  api=4 type=0 insize=1564 outsize=2446 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL _NORMALMAP _ALPHATEST_ON _PARALLAXMAP _METALLICGLOSSMAP pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1564 outsize=6350 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL _NORMALMAP _ALPHATEST_ON _PARALLAXMAP _METALLICGLOSSMAP pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
