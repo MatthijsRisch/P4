@@ -8,32 +8,29 @@ public class WeaponBase : MonoBehaviour
     public int range;
     public float fireRate;
     public bool automatic;
-    bool canFire;
+    bool canFire = true;
     public float reloadTime;
     public int bulletInClip;
     public int clipSize;
 
     public RaycastHit hit;
 
-	void Start ()
-    {
-		
-	}
-	
 	void Update ()
     {
-        if (canFire == false)
+        if(Input.GetButtonDown("Fire1") == true && canFire == true)
         {
-            TimeBetweenShots(fireRate);
+            Shoot();
+
+            StartCoroutine("TimeBetweenShots");
+            Debug.Log("enumerator");
         }
 	}
 
-    public virtual IEnumerator TimeBetweenShots(float waitTime)
+    public virtual IEnumerator TimeBetweenShots()
     {
-        yield return new WaitForSeconds(waitTime);
+        yield return new WaitForSeconds(fireRate);
         canFire = true;
     }
-
 
     public virtual void Shoot()
     {
@@ -42,10 +39,10 @@ public class WeaponBase : MonoBehaviour
             if(hit.transform.tag == "Zombie")
             {
                 Debug.Log("hit");
+                hit.transform.GetComponent<ZombieScript>().health -= damage;
             }
         }
-        Debug.DrawRay(transform.position, transform.forward * 100, Color.gray);
-
         canFire = false;
+        Debug.Log("Gun Fired");
     }
 }
