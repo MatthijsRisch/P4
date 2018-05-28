@@ -1,12 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/SampleScene.unity
-=======
-<<<<<<< HEAD
-- path: Assets/Scenes/Map Layout.unity
-=======
 - path: Assets/Scenes/Game.unity
->>>>>>> 8ff1c98c87f24bff5b388795ea50a20801e75669
->>>>>>> 6ba39d60344389839ddcd1a3d419b19d4f002d7d
   isLoaded: 1
   isActive: 1
