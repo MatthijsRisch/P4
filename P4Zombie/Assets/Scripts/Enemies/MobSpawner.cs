@@ -5,12 +5,12 @@ using UnityEngine;
 public class MobSpawner : MonoBehaviour
 {
     public GameObject zombie;
-    public int spawTime;
-    bool spawnCheck;
+    public float spawTime;
+    public bool spawnCheck;
 
     void Start()
     {
-
+        spawnCheck = true;
     }
 
     void Update()
@@ -19,6 +19,7 @@ public class MobSpawner : MonoBehaviour
         {
             StartCoroutine(Spawner());
             spawnCheck = false;
+            Debug.Log("Sawn");
         }
     }
 
@@ -27,5 +28,6 @@ public class MobSpawner : MonoBehaviour
         yield return new WaitForSeconds(spawTime);
         Instantiate(zombie, transform.position, transform.rotation);
         spawnCheck = true;
+        Debug.Log("Ie werkt");
     }
 }
