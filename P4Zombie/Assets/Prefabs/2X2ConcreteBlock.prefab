@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4476715939136774}
   - component: {fileID: 33448560185247398}
   - component: {fileID: 23664306866494644}
+  - component: {fileID: 65873089461260514}
   m_Layer: 0
   m_Name: 2X2ConcreteBlock
   m_TagString: Untagged
@@ -83,3 +84,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1710779677776650}
   m_Mesh: {fileID: 4300000, guid: 109a3fa4ecd69b740945e9ff30b432d3, type: 3}
+--- !u!65 &65873089461260514
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1710779677776650}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.000001, y: 0.100000456, z: 2.0000007}
+  m_Center: {x: -0.000000059604645, y: 0.050000183, z: 0.000000119209275}

@@ -6,16 +6,12 @@ using UnityEngine.AI;
 public class NavMash : MonoBehaviour
 {
     NavMeshAgent zombie;
-    public Transform Player;
+    Transform Player;
 
 	void Start ()
     {
         zombie = this.GetComponent<NavMeshAgent>();
-        //Player = GameObject.FindWithTag("Player").transform;
-    }
-	
-	void Update ()
-    {
+        Player = GameObject.FindWithTag("Player").transform;
         zombie.SetDestination(Player.position);
-	}
+    }
 }

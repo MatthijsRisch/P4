@@ -4,14 +4,5 @@ using UnityEngine;
 
 public class ZombieSpawn : MobSpawner
 {
-
-	void Start ()
-    {
-		
-	}
-	
-	void Update ()
-    {
-		
-	}
+    
 }
