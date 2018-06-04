@@ -1067,82 +1067,40 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 81831439}
     m_Modifications:
-    - target: {fileID: 4603828694550470, guid: de12d2a1f3c01ed4fa4a16e06d290d36, type: 2}
+    - target: {fileID: 4077380537343002, guid: 924185da468ec77439edc62f33bc8ac5, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0.53
       objectReference: {fileID: 0}
-    - target: {fileID: 4603828694550470, guid: de12d2a1f3c01ed4fa4a16e06d290d36, type: 2}
+    - target: {fileID: 4077380537343002, guid: 924185da468ec77439edc62f33bc8ac5, type: 2}
       propertyPath: m_LocalPosition.y
       value: -0.34
       objectReference: {fileID: 0}
-    - target: {fileID: 4603828694550470, guid: de12d2a1f3c01ed4fa4a16e06d290d36, type: 2}
+    - target: {fileID: 4077380537343002, guid: 924185da468ec77439edc62f33bc8ac5, type: 2}
       propertyPath: m_LocalPosition.z
       value: 0.65
       objectReference: {fileID: 0}
-    - target: {fileID: 4603828694550470, guid: de12d2a1f3c01ed4fa4a16e06d290d36, type: 2}
+    - target: {fileID: 4077380537343002, guid: 924185da468ec77439edc62f33bc8ac5, type: 2}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4603828694550470, guid: de12d2a1f3c01ed4fa4a16e06d290d36, type: 2}
+    - target: {fileID: 4077380537343002, guid: 924185da468ec77439edc62f33bc8ac5, type: 2}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4603828694550470, guid: de12d2a1f3c01ed4fa4a16e06d290d36, type: 2}
+    - target: {fileID: 4077380537343002, guid: 924185da468ec77439edc62f33bc8ac5, type: 2}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4603828694550470, guid: de12d2a1f3c01ed4fa4a16e06d290d36, type: 2}
+    - target: {fileID: 4077380537343002, guid: 924185da468ec77439edc62f33bc8ac5, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4603828694550470, guid: de12d2a1f3c01ed4fa4a16e06d290d36, type: 2}
+    - target: {fileID: 4077380537343002, guid: 924185da468ec77439edc62f33bc8ac5, type: 2}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4603828694550470, guid: de12d2a1f3c01ed4fa4a16e06d290d36, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4603828694550470, guid: de12d2a1f3c01ed4fa4a16e06d290d36, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114602713909052542, guid: de12d2a1f3c01ed4fa4a16e06d290d36,
-        type: 2}
-      propertyPath: fireRate
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114602713909052542, guid: de12d2a1f3c01ed4fa4a16e06d290d36,
-        type: 2}
-      propertyPath: canFire
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114602713909052542, guid: de12d2a1f3c01ed4fa4a16e06d290d36,
-        type: 2}
-      propertyPath: ammo
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 114602713909052542, guid: de12d2a1f3c01ed4fa4a16e06d290d36,
-        type: 2}
-      propertyPath: automatic
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114602713909052542, guid: de12d2a1f3c01ed4fa4a16e06d290d36,
-        type: 2}
-      propertyPath: clipSize
-      value: 24
-      objectReference: {fileID: 0}
-    - target: {fileID: 114602713909052542, guid: de12d2a1f3c01ed4fa4a16e06d290d36,
-        type: 2}
-      propertyPath: damage
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1449481121778566, guid: de12d2a1f3c01ed4fa4a16e06d290d36, type: 2}
-      propertyPath: m_Name
-      value: Test_HandGun
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: de12d2a1f3c01ed4fa4a16e06d290d36, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: 924185da468ec77439edc62f33bc8ac5, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &470087040
 Prefab:
@@ -4649,6 +4607,7 @@ GameObject:
   - component: {fileID: 1810303777}
   - component: {fileID: 1810303776}
   - component: {fileID: 1810303780}
+  - component: {fileID: 1810303781}
   m_Layer: 0
   m_Name: Shop
   m_TagString: Shop
@@ -4738,6 +4697,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &1810303781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1810303775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df17a1b810b9c5643b4c8fadd54974ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shopWeaponHolder:
+  - {fileID: 1365720993994110, guid: 924185da468ec77439edc62f33bc8ac5, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1001 &1840504297
 Prefab:
   m_ObjectHideFlags: 0
