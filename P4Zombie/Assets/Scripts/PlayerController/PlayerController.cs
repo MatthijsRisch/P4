@@ -25,8 +25,11 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed;
     float moveSpeedReset;
 
-    WeaponBase equippedWeapon;
+    [Header("OpenShop")]
+    public RaycastHit hitShop;
+    public int hitShopRange;
 
+    WeaponBase equippedWeapon;
 
     float timeSinceStaminaUse;
 
@@ -54,7 +57,7 @@ public class PlayerController : MonoBehaviour
             moveSpeed = moveSpeedReset;
         }
 
-        //canSprint is false while walking backwards
+        //cantSprint is false while walking backwards
         if(Input.GetAxis("Vertical") < 0)
         {
             canSprint = false;
@@ -63,6 +66,8 @@ public class PlayerController : MonoBehaviour
         {
             canSprint = true;
         }
+
+        OpenShop();
 	}
 
     private void FixedUpdate()
@@ -111,5 +116,17 @@ public class PlayerController : MonoBehaviour
         movementVector.x = Input.GetAxis("Horizontal");
         movementVector.z = Input.GetAxis("Vertical");
         transform.Translate(movementVector * moveSpeed * Time.deltaTime);
+    }
+
+    public void OpenShop()
+    {
+        if(Physics.Raycast(transform.position, transform.forward, out hitShop, hitShopRange))
+        {
+            if(hitShop.transform.tag == ("Shop") && Input.GetButtonDown("Shop"))
+            {
+                Debug.Log("Open shop");
+            }
+        }
+        Debug.DrawRay(transform.position, transform.forward * hitShopRange, Color.cyan);
     }
 }

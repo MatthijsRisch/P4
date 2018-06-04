@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25e9cb95f86626b498fc49b9798c680a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 5
 --- !u!114 &114886667872786220
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -122,7 +122,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 586ef501fbc065f4c84330d6c90093f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
 --- !u!195 &195225930874897150
 NavMeshAgent:
   m_ObjectHideFlags: 1

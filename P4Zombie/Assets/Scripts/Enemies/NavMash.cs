@@ -12,6 +12,11 @@ public class NavMash : MonoBehaviour
     {
         zombie = this.GetComponent<NavMeshAgent>();
         Player = GameObject.FindWithTag("Player").transform;
+        
+    }
+
+    void Update()
+    {
         zombie.SetDestination(Player.position);
     }
 }
