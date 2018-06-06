@@ -8,7 +8,7 @@ public class WeaponBase : MonoBehaviour
     public int range;
     public float fireRate;
     public bool automatic;
-    bool canFire = true;
+    public bool canFire = true;
     public float reloadTime;
     public int bulletInClip;
     public int clipSize;

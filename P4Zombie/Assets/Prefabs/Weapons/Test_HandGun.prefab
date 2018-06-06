@@ -116,3 +116,4 @@ MonoBehaviour:
   bulletInClip: 0
   clipSize: 24
   ammo: 200
+  currentCurrency: 0
