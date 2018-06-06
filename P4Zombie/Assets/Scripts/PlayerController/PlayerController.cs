@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour
 
     WeaponBase equippedWeapon;
 
+    public int money;
     float timeSinceStaminaUse;
 
     private void Start()
@@ -122,9 +123,17 @@ public class PlayerController : MonoBehaviour
     {
         if(Physics.Raycast(transform.position, transform.forward, out hitShop, hitShopRange))
         {
-            if(hitShop.transform.tag == ("Shop") && Input.GetButtonDown("Shop"))
+            GameObject.FindWithTag("Manager").GetComponent<UI>().openShopPanel.SetActive(true);
+
+            if (hitShop.transform.tag == ("Shop") && Input.GetButtonDown("Interact"))
             {
-                Debug.Log("Open shop");
+                Debug.Log("shop is opend");
+                
+            }
+
+            else
+            {
+                GameObject.FindWithTag("Manager").GetComponent<UI>().openShopPanel.SetActive(false);
             }
         }
         Debug.DrawRay(transform.position, transform.forward * hitShopRange, Color.cyan);
