@@ -33,11 +33,14 @@ public class PlayerController : MonoBehaviour
 
     public int money;
     float timeSinceStaminaUse;
+    public GameObject manager;
 
     private void Start()
     {
         stamina = maxStamina;
         moveSpeedReset = moveSpeed;
+
+        manager = GameObject.FindWithTag("Manager");
     }
 
     void Update ()
@@ -123,18 +126,23 @@ public class PlayerController : MonoBehaviour
     {
         if(Physics.Raycast(transform.position, transform.forward, out hitShop, hitShopRange))
         {
-            GameObject.FindWithTag("Manager").GetComponent<UI>().openShopPanel.SetActive(true);
-
-            if (hitShop.transform.tag == ("Shop") && Input.GetButtonDown("Interact"))
+            if (hitShop.transform.tag == ("Shop"))
             {
-                Debug.Log("shop is opend");
-                
-            }
+                manager.GetComponent<UI>().openShopPanel.SetActive(true);
 
-            else
-            {
-                GameObject.FindWithTag("Manager").GetComponent<UI>().openShopPanel.SetActive(false);
+                if (hitShop.transform.tag == ("Shop") && Input.GetButtonDown("Interact"))
+                {
+                    Debug.Log("shop is opend");
+                    manager.GetComponent<UI>().shopPanel.SetActive(true);
+                    Cursor.lockState = CursorLockMode.None;
+                }
             }
+        }
+        else
+        {
+            manager.GetComponent<UI>().openShopPanel.SetActive(false);
+            manager.GetComponent<UI>().shopPanel.SetActive(false);
+            Cursor.lockState = CursorLockMode.Locked;
         }
         Debug.DrawRay(transform.position, transform.forward * hitShopRange, Color.cyan);
     }
