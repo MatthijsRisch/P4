@@ -8,13 +8,11 @@ public class WeaponBase : MonoBehaviour
     public int range;
     public float fireRate;
     public bool automatic;
-    bool canFire = true;
+    public bool canFire = true;
     public float reloadTime;
     public int bulletInClip;
     public int clipSize;
     public int ammo;
-
-    public int currentCurrency;
 
     public RaycastHit hit;
 
@@ -54,7 +52,7 @@ public class WeaponBase : MonoBehaviour
                 hit.transform.GetComponent<ZombieScript>().health -= damage;
                 if(hit.transform.GetComponent<ZombieScript>().health <= 0)
                 {
-                    currentCurrency += hit.transform.GetComponent<ZombieScript>().currency;
+                    GameObject.FindWithTag("Player").GetComponentInParent<PlayerController>().money += hit.transform.GetComponent<ZombieScript>().currency;
                     Debug.Log("cur ++");
                 }
             }

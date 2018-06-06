@@ -111,6 +111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 5
+  currency: 10
 --- !u!114 &114886667872786220
 MonoBehaviour:
   m_ObjectHideFlags: 1
