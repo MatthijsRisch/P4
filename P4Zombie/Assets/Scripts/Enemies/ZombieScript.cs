@@ -5,6 +5,7 @@ using UnityEngine;
 public class ZombieScript : MonoBehaviour
 {
     public int health;
+    public int currency;
 
     private void Update()
     {

@@ -14,6 +14,8 @@ public class WeaponBase : MonoBehaviour
     public int clipSize;
     public int ammo;
 
+    public int currentCurrency;
+
     public RaycastHit hit;
 
     private void Start()
@@ -50,6 +52,11 @@ public class WeaponBase : MonoBehaviour
             {
                 Debug.Log("hit");
                 hit.transform.GetComponent<ZombieScript>().health -= damage;
+                if(hit.transform.GetComponent<ZombieScript>().health <= 0)
+                {
+                    currentCurrency += hit.transform.GetComponent<ZombieScript>().currency;
+                    Debug.Log("cur ++");
+                }
             }
         }
         canFire = false;
