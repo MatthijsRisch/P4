@@ -27,7 +27,7 @@ public class Shotgun : WeaponBase
                     hit.transform.GetComponent<ZombieScript>().health -= damage;
                     if (hit.transform.GetComponent<ZombieScript>().health <= 0)
                     {
-                        currentCurrency += hit.transform.GetComponent<ZombieScript>().currency;
+                        GameObject.FindWithTag("Player").GetComponentInParent<PlayerController>().money += hit.transform.GetComponent<ZombieScript>().currency;
                         Debug.Log("cur ++");
                     }
                 }
